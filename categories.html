@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Categories | Md. Masud Rana</title>
+    <meta name="title" content="Categories & Directory | Md. Masud Rana" />
+    <meta
+      name="description"
+      content="Explore the complete index of projects, technical research, and archive publications by Md. Masud Rana."
+    />
+    <meta
+      name="keywords"
+      content="Md. Masud Rana, Directory, Sitemap, Technical Blog, Cybersecurity, Development Projects, Tech Index"
+    />
+    <meta name="author" content="Md. Masud Rana" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://masud.aio.bd/categories.html" />
+    <meta property="og:title" content="Categories & Directory | Md. Masud Rana" />
+    <meta property="og:description" content="A comprehensive archive of professional utilities, developer tutorials, and emerging tech research." />
+    <meta property="og:image" content="https://i.ibb.co/4n3krMtB/masud.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://masud.aio.bd/categories.html" />
+    <meta property="twitter:title" content="Categories & Directory | Md. Masud Rana" />
+    <meta property="twitter:description" content="Explore the complete index of projects and technical publications by Md. Masud Rana." />
+    <meta property="twitter:image" content="https://i.ibb.co/4n3krMtB/masud.png" />
+    
+    <meta name="theme-color" content="#0f172a" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link rel="stylesheet" href="css/categories.css" />
+    <style>
+      /* Matched styles from Contact Page structure */
+      .legal-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .legal-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .last-updated {
+        color: var(--text-muted, #94a3b8);
+        font-size: 0.95rem;
+        display: block;
+      }
+      
+      /* Grid Layouts */
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
+      }
+      .block-primary { grid-column: span 8; }
+      .block-secondary { grid-column: span 4; }
+      .block-full { grid-column: span 12; }
+
+      @media (max-width: 768px) {
+        .block-primary, .block-secondary, .block-full {
+          grid-column: span 12;
+        }
+      }
+
+      /* Card Styles matching Contact Form Inputs */
+      .bento-card {
+        background: rgba(255, 255, 255, 0.05); /* Matches contact form input bg */
+        border: 1px solid var(--card-border, #1e293b);
+        border-radius: 16px;
+        padding: 25px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+      .bento-card:hover {
+        border-color: var(--primary, #38bdf8);
+        transform: translateY(-2px);
+      }
+
+      /* Inner Links */
+      .utility-link {
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid transparent;
+        transition: 0.3s;
+      }
+      .utility-link:hover {
+        background: rgba(56, 189, 248, 0.1);
+        border-color: rgba(56, 189, 248, 0.3);
+      }
+      
+      /* Ensure body/root defaults prevent flash */
+      body {
+        background-color: var(--bg-color, #0b0f1a);
+        color: var(--text-color, #ffffff);
+      }
+    </style>
+
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        if (savedTheme === 'light') {
+          document.documentElement.classList.add('light-mode');
+        }
+      })();
+    </script>
+  </head>
+  
+  <body>
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+    </script>
+
+    <header id="main-header">
+      <div class="header-container">
+        <div class="brand-container">
+          <a href="/" class="logo">
+            <span class="logo-primary">MASUD</span><span class="logo-secondary">RANA</span>
+          </a>
+          <div class="tagline-container">
+            <span class="dynamic-text">Cyber Security Expert</span>
+          </div>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul>
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/#about" class="nav-link">About</a></li>
+            <li><a href="/#skills" class="nav-link">Skills</a></li>
+            <li><a href="/#projects" class="nav-link">Projects</a></li>
+            <li><a href="/#experience" class="nav-link">Experience</a></li>
+            <li><a href="/contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+          <i class="ri-moon-line" id="theme-icon"></i>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobile-bottom-nav">
+      <a href="/" class="mobile-link">
+        <i class="ri-home-5-line"></i>
+        <span>Home</span>
+      </a>
+      <a href="/#about" class="mobile-link">
+        <i class="ri-user-3-line"></i>
+        <span>About</span>
+      </a>
+      <a href="/categories.html" class="mobile-link active">
+        <i class="ri-folder-5-line"></i>
+        <span>Dir</span>
+      </a>
+      <a href="/#projects" class="mobile-link">
+        <i class="ri-macbook-line"></i>
+        <span>Projects</span>
+      </a>
+      <a href="/contact.html" class="mobile-link">
+        <i class="ri-mail-send-line"></i>
+        <span>Contact</span>
+      </a>
+    </nav>
+
+     <main style="padding-top: 100px; padding-bottom: 80px;">
+      <div class="legal-container">
+        
+        <header class="legal-header">
+          <h1 class="gradient-text">Directory</h1>
+          <span class="last-updated">Full architectural index of projects & research</span>
+        </header>
+
+  
+
+          <div class="bento-card block-secondary">
+            <h2 style="font-size: 1.3rem; margin-bottom: 20px; color: #10b981; display: flex; align-items: center; gap: 10px;">
+              <i class="ri-code-box-line"></i> Development
+            </h2>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+              <li><a href="/Banga Question Answering System/" style="color: #cbd5e1; text-decoration: none; font-size: 0.95rem; display: block; padding: 5px 0;">Banga Question Answering System</a></li>
+              <li><a href="/HelloDr/" style="color: #cbd5e1; text-decoration: none; font-size: 0.95rem; display: block; padding: 5px 0;">HelloDr Medical System</a></li>
+              <li><a href="/IoT-Environmental-Monitoring-System/" style="color: #cbd5e1; text-decoration: none; font-size: 0.95rem; display: block; padding: 5px 0;">IoT Environment Project</a></li>
+              <li><a href="/DocMind/" style="color: #cbd5e1; text-decoration: none; font-size: 0.95rem; display: block; padding: 5px 0;">Docmind-ChatBot</a></li>
+            </ul>
+          </div>
+
+          
+
+          <div class="bento-card block-full">
+            <h2 style="font-size: 1.3rem; margin-bottom: 25px; color: #94a3b8; display: flex; align-items: center; gap: 10px;">
+              <i class="ri-shield-check-line"></i> Legal & Site Information
+            </h2>
+            <div class="legal-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+              <div>
+                <h3 style="font-size: 0.75rem; text-transform: uppercase; color: #4b5563; margin-bottom: 12px; font-weight: 700;">Identity</h3>
+                <a href="/about.html" style="display: block; color: #cbd5e1; text-decoration: none; margin-bottom: 8px; font-size: 0.9rem;">About Me</a>
+                <a href="/contact.html" style="display: block; color: #cbd5e1; text-decoration: none; font-size: 0.9rem;">Contact Support</a>
+              </div>
+              <div>
+                <h3 style="font-size: 0.75rem; text-transform: uppercase; color: #4b5563; margin-bottom: 12px; font-weight: 700;">Policies</h3>
+                <a href="/privacy-policy.html" style="display: block; color: #cbd5e1; text-decoration: none; margin-bottom: 8px; font-size: 0.9rem;">Privacy Policy</a>
+                <a href="/cookie-policy.html" style="display: block; color: #cbd5e1; text-decoration: none; font-size: 0.9rem;">Cookie Policy</a>
+              </div>
+              <div>
+                <h3 style="font-size: 0.75rem; text-transform: uppercase; color: #4b5563; margin-bottom: 12px; font-weight: 700;">Legal</h3>
+                <a href="/terms-conditions.html" style="display: block; color: #cbd5e1; text-decoration: none; margin-bottom: 8px; font-size: 0.9rem;">Terms of Service</a>
+                <a href="/disclaimer.html" style="display: block; color: #cbd5e1; text-decoration: none; font-size: 0.9rem;">Disclaimer</a>
+              </div>
+              <div style="background: rgba(56, 189, 248, 0.05); padding: 15px; border-radius: 12px;">
+                <h3 style="font-size: 0.75rem; text-transform: uppercase; color: #38bdf8; margin-bottom: 8px; font-weight: 700;">System</h3>
+                <span style="font-size: 0.85rem; color: #94a3b8; display: block;">V.2.0.4 Build</span>
+                <span style="font-size: 0.85rem; color: #10b981; display: block;">● All Systems Online</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand fade-up">
+            <a href="/" class="footer-logo">
+              <span class="masud">MD. MASUD RANA</span>
+            </a>
+            <p class="footer-tagline"> Aspiring AI Engineer and Researcher </p>
+            <p class="footer-motto">Building real-world projects in Machine Learning, Cybersecurity, Computer Vision, and IoT.</p>
+          </div>
+
+          <nav class="footer-nav fade-up delay-100" aria-label="Footer Navigation">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about.html">About Me</a></li>
+              <li><a href="/privacy-policy.html">Privacy Policies</a></li>
+              <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+              <li><a href="/disclaimer.html">Disclaimer</a></li>
+              <li><a href="/cookie-policy.html">Cookie Policy</a></li>
+              <li><a href="/categories.html">Categories</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+             
+            </ul>
+          </nav>
+
+          <div class="footer-social fade-up delay-200">
+            <h4 class="footer-heading">Connect</h4>
+            <div class="footer-contact-item" onclick="copyFooterEmail()">
+              <i class="ri-mail-line"></i>
+              <span id="footer-email">contact@masud.aio.bd</span>
+              <span class="footer-copy-toast">Copied!</span>
+            </div>
+
+            <div class="footer-social-icons">
+              <a href="https://github.com/masud770" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+              <a href="https://www.linkedin.com/in/masudr760/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+              <a href="https://scholar.google.com/citations?user=BT4JlCEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="ri-google-line"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2022–2026 <a href="https://masud.aio.bd" target="_blank">Md. Masud Rana</a>. All rights reserved.
+          </p>
+          <ul class="footer-legal-links">
+            <li><a href="/privacy-policy.html">Privacy</a></li>
+            <li><a href="/terms-conditions.html">Terms</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Scroll to top">
+            <i class="ri-arrow-up-s-line"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/categories.js"></script>
+    <script>
+      function copyFooterEmail() {
+        const email = document.getElementById('footer-email').innerText;
+        navigator.clipboard.writeText(email).then(() => {
+          const toast = document.querySelector('.footer-copy-toast');
+          if (toast) {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0)';
+            setTimeout(() => {
+              toast.style.opacity = '0';
+              toast.style.transform = 'translateY(10px)';
+            }, 2000);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

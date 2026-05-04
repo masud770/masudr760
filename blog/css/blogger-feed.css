@@ -1,0 +1,263 @@
+
+
+    /* --- Layout Grid --- */
+    .blog-wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: 3fr 1fr; /* 75% Posts, 25% Sidebar */
+        gap: 40px;
+        align-items: start;
+    }
+
+    /* --- Main Content (Left) --- */
+    .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 Posts per line on Desktop */
+        gap: 25px;
+    }
+
+    /* Post Card Styling */
+    .blog-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--hover-shadow);
+        border-color: var(--accent-color);
+    }
+    
+    .card-img-wrap {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        display: block;
+        overflow: hidden;
+    }
+
+    .card-img-wrap img {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+    }
+
+    .card-tag {
+        position: absolute; 
+        top: 10px; 
+        right: 10px;
+        background: rgba(15, 23, 42, 0.85); /* Always dark bg for contrast */
+        backdrop-filter: blur(4px);
+        color: #fff;
+        padding: 4px 10px; 
+        font-size: 0.7rem; 
+        font-weight: 600;
+        border-radius: 6px;
+        letter-spacing: 0.5px;
+    }
+
+    .card-content { 
+        padding: 20px; 
+        flex: 1; 
+        display: flex; 
+        flex-direction: column; 
+    }
+
+    .card-date { 
+        color: var(--text-secondary); 
+        font-size: 0.8rem; 
+        margin-bottom: 8px; 
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .card-title { 
+        font-size: 1.15rem; 
+        margin: 0 0 10px 0; 
+        line-height: 1.4; 
+        font-weight: 700;
+    }
+
+    .card-title a { 
+        color: var(--text-primary); 
+        text-decoration: none; 
+        transition: color 0.2s;
+    }
+
+    .card-title a:hover { 
+        color: var(--accent-color); 
+    }
+
+    .card-desc { 
+        color: var(--text-secondary); 
+        font-size: 0.95rem; 
+        line-height: 1.6;
+        margin-bottom: 20px; 
+        flex-grow: 1; 
+    }
+
+    .card-read { 
+        color: var(--accent-color); 
+        font-size: 0.9rem; 
+        font-weight: 600; 
+        text-decoration: none; 
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* --- Sidebar (Right) --- */
+    .sidebar { 
+        position: sticky; 
+        top: 20px; 
+    }
+
+    .sidebar-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar-title {
+        color: var(--text-primary);
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 12px; 
+        margin-bottom: 25px; 
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+    
+    .pop-item {
+        display: flex; 
+        gap: 15px; 
+        margin-bottom: 20px;
+        align-items: flex-start;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .pop-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .pop-number {
+        font-size: 1.5rem; 
+        font-weight: 800; 
+        color: var(--border-color); /* Subtle number color */
+        min-width: 25px; 
+        line-height: 1;
+        font-style: italic;
+    }
+
+    .pop-info { 
+        display: flex; 
+        flex-direction: column; 
+    }
+
+    .pop-title {
+        color: var(--text-primary); 
+        font-size: 0.95rem; 
+        font-weight: 600;
+        text-decoration: none; 
+        line-height: 1.4; 
+        margin-bottom: 5px;
+        transition: color 0.2s;
+    }
+
+    .pop-title:hover { 
+        color: var(--accent-color); 
+    }
+
+    .pop-date { 
+        font-size: 0.75rem; 
+        color: var(--text-secondary); 
+    }
+
+    /* Load More Button */
+    .load-more-div { 
+        text-align: center; 
+        margin-top: 50px; 
+        grid-column: 1 / -1; 
+    }
+
+    #loadMoreBtn {
+        background: var(--accent-color); 
+        color: #ffffff; 
+        border: none;
+        padding: 12px 35px; 
+        border-radius: 50px; 
+        cursor: pointer;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    #loadMoreBtn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+        filter: brightness(110%);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 1024px) {
+        .posts-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (max-width: 768px) {
+        .blog-wrapper { grid-template-columns: 1fr; gap: 30px;}
+        .posts-grid { grid-template-columns: 1fr; }
+        .sidebar { position: static; }
+    }
+
+
+/* Animation for fading in posts smoothly */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Infinite Scroll Loader Styling */
+.loading-spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: spin 0.75s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Override the old button style to look like simple text */
+#loadMoreBtn {
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    box-shadow: none !important;
+    cursor: default;
+    padding: 10px;
+}

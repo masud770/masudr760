@@ -1,0 +1,17 @@
+# Ensure robots.txt is served as plain text
+<Files "robots.txt">
+    ForceType text/plain
+    Header set Content-Type "text/plain"
+</Files>
+
+# Ensure sitemap.xml is served as XML
+<Files "sitemap.xml">
+    ForceType application/xml
+    Header set Content-Type "application/xml"
+</Files>
+
+# Allow bots to access these specific files
+<FilesMatch "^(robots\.txt|sitemap\.xml)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
