@@ -1147,8 +1147,10 @@
             </div>
 
             <div class="contact-form-container fade-up delay-100">
-              <form id="portfolio-contact-form" onsubmit="handleFormSubmission(event)">
-                <input type="text" name="_honeypot" style="display: none" />
+              <form id="portfolio-contact-form" action="https://formsubmit.co/ajax/contact@masud.aio.bd" method="POST" onsubmit="handleFormSubmission(event)">
+                <input type="text" name="_honey" style="display: none" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
 
                 <div class="form-group">
                   <label for="name">Full Name</label>

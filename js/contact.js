@@ -113,25 +113,29 @@ async function handleFormSubmission(event) {
     const now = new Date();
     const timestamp = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
     formData.append('_subject', `Portfolio Message from ${formData.get('name')} [${timestamp}]`);
+    formData.append('_replyto', formData.get('email'));
 
     try {
         // 3. Post to FormSubmit
-        const response = await fetch("https://formsubmit.co/ajax/contact@masud.aio.bd", {
+        const endpoint = form.action || "https://formsubmit.co/ajax/contact@masud.aio.bd";
+        const response = await fetch(endpoint, {
             method: "POST",
             body: formData,
             headers: { 'Accept': 'application/json' }
         });
 
-        if (response.ok) {
-            // Success Logic
-            feedback.innerHTML = '<i class="ri-checkbox-circle-fill"></i> Message sent successfully!';
-            feedback.className = "form-feedback success";
-            feedback.style.display = "block";
-            form.reset();
-        } else {
-            throw new Error();
+        const result = await response.json();
+        if (!response.ok || !result.success) {
+            throw new Error(result.message || 'Form submission failed.');
         }
+
+        // Success Logic
+        feedback.innerHTML = '<i class="ri-checkbox-circle-fill"></i> Message sent successfully!';
+        feedback.className = "form-feedback success";
+        feedback.style.display = "block";
+        form.reset();
     } catch (error) {
+        console.error('Form submission failed:', error);
         // Error Logic
         feedback.innerHTML = '<i class="ri-error-warning-fill"></i> Oops! Something went wrong.';
         feedback.className = "form-feedback error";
